@@ -20,12 +20,9 @@ PIXI.filters.MyFilter = class extends PIXI.Filter {
   
         void main(void) {
           vec4 color = texture2D(uSampler, vTextureCoord);
-          color.r += 144.0/255.0;
-          color.r = color.r > 1.0 ? 1.0 : color.r;
-          color.g += 144.0/255.0;
-          color.g = color.g > 1.0 ? 1.0 : color.g;
-          // color.b += 0;
-          // color.b = color.r > 1.0 ? 1.0 : color.b;
+          color.r += min(144.0/255.0, 255.0);
+          color.g += min(144.0/255.0, 255.0);
+
           gl_FragColor = color;
         }
       `;
