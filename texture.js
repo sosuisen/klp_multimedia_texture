@@ -30,7 +30,6 @@ tl.to(sprite2, { x: 0, duration: 2, repeat: -1, ease: 'power1.inOut', yoyo: true
 
 // 動画もテクスチャにできます（音も鳴ります）
 // 「動画再生」ボタンで再生
-/*
 const vTexture = PIXI.Texture.from('nhk.mp4');
 vTexture.baseTexture.resource.autoPlay = false;
 const sprite3 = new PIXI.Sprite(vTexture);
@@ -38,7 +37,7 @@ const sprite3 = new PIXI.Sprite(vTexture);
 container.addChildAt(sprite3, 0);
 // タイムライン開始の0秒後に開始
 tl.to(sprite3, { x: -100, duration: 2, repeat: -1, ease: 'power1.inOut', yoyo: true }, '<');
-*/
+
 
 const mask1 = new PIXI.Graphics();
 mask1.beginFill();
@@ -57,6 +56,17 @@ mask1.endFill();
 // スプライトでマスクすることもできます。
 // mask1 を全て外して、下記を有効にしてください。
 // container.mask = sprite1;
+
+// 基本課題
+const mask2 = new PIXI.Graphics();
+mask2.beginFill();
+mask2.drawRect(0, 0, 200, 200);
+mask2.endFill();
+mask2.pivot.set(100, 100);
+mask2.position.set(320, 180);
+tl.to(mask2, { duration: 5, repeat: -1, ease: 'none', angle: 360, }, '<');
+container.addChild(mask2);
+container.mask = mask2
 
 
 app.stage.addChild(container);
