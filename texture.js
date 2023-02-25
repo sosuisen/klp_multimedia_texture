@@ -40,7 +40,6 @@ tl.to(sprite3, { x: -100, duration: 2, repeat: -1, ease: 'power1.inOut', yoyo: t
 
 const mask = new PIXI.Graphics();
 mask.beginFill();
-// mask.drawCircle(200, 200, 200);
 mask.drawCircle(370, 150, 100);
 mask.endFill();
 
@@ -52,6 +51,7 @@ sprite3.addChild(mask);
 
 // さらにマスクをコンテナの子にすると、コンテナ全体がクリッピングされます。
 container.mask = mask;
+
 
 app.stage.addChild(container);
 
