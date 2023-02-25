@@ -21,6 +21,12 @@ PIXI.filters.MyFilter = class extends PIXI.Filter {
         void main(void) {
           vec4 color = texture2D(uSampler, vTextureCoord);
 
+          // 下記は例です。修正してください。
+          color.r += 0.2;
+          color.g += 0.2;
+          color.b += 0.2;
+          
+
           gl_FragColor = color;
         }
       `;
