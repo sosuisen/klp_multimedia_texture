@@ -64,7 +64,11 @@ mask2.drawRect(0, 0, 200, 200);
 mask2.endFill();
 mask2.pivot.set(100, 100);
 mask2.position.set(320, 180);
-tl.to(mask2, { duration: 5, repeat: -1, ease: 'none', angle: 360, }, '<');
+tl.to(mask2, {
+  duration: 5, repeat: -1, ease: 'none', pixi: {
+    rotation: 360,
+  }
+}, '<');
 container.addChild(mask2);
 container.mask = mask2
 
