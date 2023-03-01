@@ -17,7 +17,7 @@ PIXI.filters.MyFilter = class extends PIXI.Filter {
     //   max(x, y)   xとyのより大きい値を返す
     // 
     // 式に数値を書くときはは 144.0 のように必ず浮動小数点数で書いてください。
-    // 書く色の値が 1.0 を超えたら 1.0 にしてください。
+    // 色の値が 1.0 を超えたら 1.0 にしてください。
 
     const fragmentSrc = `
         varying vec2 vTextureCoord;
