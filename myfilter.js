@@ -14,7 +14,6 @@ PIXI.filters.MyFilter = class extends PIXI.Filter {
     // 書く色の値が 1.0 を超えたら 1.0 にしてください。
 
     const fragmentSrc = `
-        precision mediump float;
         varying vec2 vTextureCoord;
         uniform sampler2D uSampler;
   
