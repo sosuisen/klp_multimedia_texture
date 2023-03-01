@@ -10,6 +10,12 @@ PIXI.filters.MyFilter = class extends PIXI.Filter {
     // color.r += 0.2;
     // と書くと、rに51を加算（Add）するのと同じです。
     // 
+    // GLSLでは一般的な四則演算 + - * /
+    // if文、三項演算子、
+    // そのほか、次のようなビルトイン関数が使えます。
+    //   min(x, y)   xとyのより小さい値を返す
+    //   max(x, y)   xとyのより大きい値を返す
+    // 
     // 式に数値を書くときはは 144.0 のように必ず浮動小数点数で書いてください。
     // 書く色の値が 1.0 を超えたら 1.0 にしてください。
 
@@ -19,6 +25,12 @@ PIXI.filters.MyFilter = class extends PIXI.Filter {
   
         void main(void) {
           vec4 color = texture2D(uSampler, vTextureCoord);
+
+          // 下記は例です。修正してください。
+          color.r += 0.2;
+          color.g += 0.2;
+          color.b += 0.2;
+          
 
           gl_FragColor = color;
         }
