@@ -4,7 +4,7 @@ import { PixiPlugin } from "gsap/PixiPlugin";
 gsap.registerPlugin(PixiPlugin);
 PixiPlugin.registerPIXI(PIXI);
 
-let app = new PIXI.Application({ antialias: true, width: 640, height: 480 });
+const app = new PIXI.Application({ antialias: true, width: 640, height: 480 });
 app.ticker.stop();
 gsap.ticker.add(time => {
   app.ticker.update();
