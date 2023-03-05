@@ -1,3 +1,5 @@
+import * as PIXI from 'pixi.js';
+
 export const MyFilter = class extends PIXI.Filter {
   constructor() {
     // colorには元の画像のピクセルの色が収められています。
