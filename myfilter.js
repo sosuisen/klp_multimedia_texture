@@ -3,7 +3,6 @@ import * as PIXI from 'pixi.js';
 export const MyFilter = class extends PIXI.Filter {
   constructor() {
     const fragmentSrc = `
-        precision mediump float;
         varying vec2 vTextureCoord;
         uniform sampler2D uSampler;
   
