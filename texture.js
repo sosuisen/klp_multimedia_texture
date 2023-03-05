@@ -43,11 +43,12 @@ container.addChildAt(sprite3, 0);
 // タイムライン開始の0秒後に開始
 tl.to(sprite3, { x: -100, duration: 2, repeat: -1, ease: 'power1.inOut', yoyo: true }, '<');
 
-
+/*
 const mask1 = new PIXI.Graphics();
 mask1.beginFill();
 mask1.drawCircle(370, 150, 100);
 mask1.endFill();
+*/
 
 // 動画にマスクを追加すると、動画だけがクリッピングされます。
 // sprite3.mask = mask1;
@@ -69,7 +70,11 @@ mask2.drawRect(0, 0, 200, 200);
 mask2.endFill();
 mask2.pivot.set(100, 100);
 mask2.position.set(320, 180);
-tl.to(mask2, { duration: 5, repeat: -1, ease: 'none', angle: 360, }, '<');
+tl.to(mask2, { duration: 5, repeat: -1, ease: 'none', 
+  pixi: {
+    rotation: 360,
+  },
+ }, '<');
 container.addChild(mask2);
 container.mask = mask2
 
