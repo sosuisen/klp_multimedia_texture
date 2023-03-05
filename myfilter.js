@@ -1,4 +1,4 @@
-PIXI.filters.MyFilter = class extends PIXI.Filter {
+export const MyFilter = class extends PIXI.Filter {
   constructor() {
     // colorには元の画像のピクセルの色が収められています。
     //
