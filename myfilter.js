@@ -1,4 +1,4 @@
-PIXI.filters.MyFilter = class extends PIXI.Filter {
+export const MyFilter = class extends PIXI.Filter {
   constructor() {
     const fragmentSrc = `
         precision mediump float;

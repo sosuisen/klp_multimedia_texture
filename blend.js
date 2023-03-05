@@ -1,3 +1,5 @@
+import * as PIXI from 'pixi.js';
+import { MyFilter } from './myfilter.js';
 // 重ねる色を指定
 const color = 0x909000;
 
@@ -76,6 +78,6 @@ bg5.tint = color;
  * 発展課題
  */ 
 // カスタムフィルタを適用
-const myFilter = new PIXI.filters.MyFilter();
+const myFilter = new MyFilter();
 bg6.filters = [myFilter];
 bg6.addChild(new PIXI.Text('Add（発展課題）', style));
