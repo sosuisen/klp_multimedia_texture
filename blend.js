@@ -6,7 +6,7 @@ const color = 0x909000;
 // 絵の縦横サイズ
 const imgSize = 260;
 
-let app = new PIXI.Application({ antialias: true, width: imgSize * 3, height: imgSize * 2 });
+const app = new PIXI.Application({ antialias: true, width: imgSize * 3, height: imgSize * 2 });
 
 document.body.appendChild(app.view);
 
