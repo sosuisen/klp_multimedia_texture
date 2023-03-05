@@ -8,9 +8,8 @@ export const MyFilter = class extends PIXI.Filter {
   
         void main(void) {
           vec4 color = texture2D(uSampler, vTextureCoord);
-          color.r += min(144.0/255.0, 255.0);
-          color.g += min(144.0/255.0, 255.0);
-
+          color.r = min(color.r + 144.0/255.0, 1.0);
+          color.g = min(color.g + 144.0/255.0, 1.0);
           gl_FragColor = color;
         }
       `;
