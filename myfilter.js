@@ -1,3 +1,5 @@
+import * as PIXI from 'pixi.js';
+
 export const MyFilter = class extends PIXI.Filter {
   constructor() {
     const fragmentSrc = `
