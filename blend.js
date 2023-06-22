@@ -48,7 +48,7 @@ const style = new PIXI.TextStyle({
 
 // 通常（NORMAL）（デフォルト）
 const c1 = createCircle(color);
-c1.alpha = 0.5; // 透明度50%
+c1.alpha = 0.5; // 不透明度50%
 bg1.addChild(c1);
 bg1.addChild(new PIXI.Text('Normal（Alpha 0.5）', style));
 
