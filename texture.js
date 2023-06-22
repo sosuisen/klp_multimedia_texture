@@ -12,9 +12,6 @@ gsap.ticker.add(time => {
 
 document.body.appendChild(app.view);
 
-// タイムライン
-const tl = gsap.timeline()
-
 // コンテナの作成
 const container = new PIXI.Container();
 app.stage.addChild(container);
@@ -24,14 +21,14 @@ const texture = PIXI.Texture.from('kyoco_small.png');
 // テクスチャからスプライトを作成
 const sprite1 = new PIXI.Sprite(texture);
 container.addChild(sprite1);
-tl.to(sprite1, { x: 520, duration: 2, repeat: -1, ease: 'power1.inOut', yoyo: true });
+gsap.to(sprite1, { x: 520, duration: 2, repeat: -1, ease: 'power1.inOut', yoyo: true });
 
 // テクスチャは他のスプライトでも使い回すことができます。
 // 一方、PIXI.Sprite.from()では、毎回新たにメモリが確保されてしまいます。
 const sprite2 = new PIXI.Sprite(texture);
 sprite2.position.set(520, 150);
 container.addChild(sprite2);
-tl.to(sprite2, { x: 0, duration: 2, repeat: -1, ease: 'power1.inOut', yoyo: true }, '<');
+gsap.to(sprite2, { x: 0, duration: 2, repeat: -1, ease: 'power1.inOut', yoyo: true });
 
 // 動画もテクスチャにできます（音も鳴ります）
 // 「動画再生」ボタンで再生
@@ -42,7 +39,7 @@ const sprite3 = new PIXI.Sprite(vTexture);
 // １番最初（0）の子、つまり１番奥へ追加
 container.addChildAt(sprite3, 0);
 // タイムライン開始の0秒後に開始
-tl.to(sprite3, { x: -100, duration: 2, repeat: -1, ease: 'power1.inOut', yoyo: true }, '<');
+gsap.to(sprite3, { x: -100, duration: 2, repeat: -1, ease: 'power1.inOut', yoyo: true });
 */
 
 const mask1 = new PIXI.Graphics();
