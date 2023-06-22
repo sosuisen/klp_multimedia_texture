@@ -14,7 +14,7 @@ export const MyFilter = class extends PIXI.Filter {
     // color.r += 0.2;
     // と書くと、rに51を加算（Add）するのと同じです。
     // 
-    // GLSLではc言語の文法に似ており、
+    // GLSLはc言語の文法に似ており、
     // 一般的な四則演算 + - * /
     // if文、三項演算子、
     // そのほか、次のようなビルトイン関数が使えます。
