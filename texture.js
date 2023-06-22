@@ -34,7 +34,8 @@ gsap.to(sprite2, { x: 0, duration: 2, repeat: -1, ease: 'power1.inOut', yoyo: tr
 // 「動画再生」ボタンで再生
 /*
 const vTexture = PIXI.Texture.from('nhk.mp4');
-vTexture.baseTexture.resource.autoPlay = false;
+// vTexture.baseTexture.resource.source.muted = true;
+// vTexture.baseTexture.resource.source.autoPlay = true;
 const sprite3 = new PIXI.Sprite(vTexture);
 // １番最初（0）の子、つまり１番奥へ追加
 container.addChildAt(sprite3, 0);
