@@ -38,7 +38,6 @@ vTexture.baseTexture.resource.autoPlay = false;
 const sprite3 = new PIXI.Sprite(vTexture);
 // １番最初（0）の子、つまり１番奥へ追加
 container.addChildAt(sprite3, 0);
-// タイムライン開始の0秒後に開始
 gsap.to(sprite3, { x: -100, duration: 2, repeat: -1, ease: 'power1.inOut', yoyo: true });
 */
 
