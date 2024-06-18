@@ -1,5 +1,7 @@
 import * as PIXI from 'pixi.js';
-import { MyFilter } from './myfilter.js';
+import { AddFilter } from './addfilter.js';
+import { MultiplyFilter } from './multiplyfilter.js';
+import { ScreenFilter } from './screenfilter.js';
 // 重ねる色を指定
 const color = 0x909000;
 
@@ -78,6 +80,23 @@ bg5.tint = color;
  * 発展課題
  */ 
 // カスタムフィルタを適用
-const myFilter = new MyFilter(144, 144, 0);
-bg6.filters = [myFilter];
-bg6.addChild(new PIXI.Text('Add（発展課題）', style));
+const addFilter = new AddFilter(144, 144, 0);
+const multiplyFilter = new MultiplyFilter(144, 144, 0);
+const screenFilter = new ScreenFilter(144, 144, 0);
+bg6.filters = [addFilter];
+bg6.addChild(new PIXI.Text('シェーダ版（発展）', style));
+
+document.getElementById('blendModeSelector').addEventListener('change', (e) => {  
+  const value = e.target.value;
+  switch (value) {
+    case 'add':
+      bg6.filters = [addFilter];
+      break;
+    case 'multiply':
+      bg6.filters = [multiplyFilter];
+      break;
+    case 'screen':
+      bg6.filters = [screenFilter];
+      break;
+  }
+});
